@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:3000/api" });
+const API = axios.create({ baseURL: "http://localhost:5000/api" });
 
 export const searchBooks = (query) => API.get(`/books/search?query=${query}`);
 export const registerUser = (userData) => API.post("/users/register", userData);
