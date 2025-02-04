@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/login";
 import Search from "./pages/Search";
 import BookDetails from "./pages/BookDetails";
+import Recommendations from "./pages/Recommendations";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                     <h1 className="text-xl font-bold">📖 BookApp</h1>
                     <nav className="mt-6">
                         <Link to="/Search" className="block py-2">🔍 Search Books</Link>
-                        <Link to="/recommendations" className="block py-2">✨ Recommendations</Link>
+                        <Link to="/Recommendations" className="block py-2">✨ Recommendations</Link>
                         <Link to="/login" className="block py-2">🔑 Login</Link>
                         <Link to="/Register" className="block py-2">📝 Register</Link>
                     </nav>
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/books" element={<BookDetails />} />
+                <Route path="/Recommendations" element={<Recommendations />} />
             </Routes>
         </Router>
         </>
